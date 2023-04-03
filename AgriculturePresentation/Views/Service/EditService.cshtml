@@ -1,0 +1,35 @@
+﻿@model EntityLayer.Concrete.Service
+@{
+    ViewData["Title"] = "EditService";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Hizmet Düzenle</h4>
+           
+            <form class="forms-sample" method="post">
+                @Html.HiddenFor(x=>x.ServiceID)
+                <div class="form-group">
+                    <label>Başlık</label>
+                    <input type="text" asp-for="Title" class="form-control form-control-lg" placeholder="Başlık" aria-label="Username">
+                </div>
+                <div class="form-group">
+                    <label>Görsel Yolu</label>
+                    <input type="text" asp-for="Image" class="form-control" placeholder="Görsel Ekle" aria-label="Username">
+                </div>
+                <div class="form-group">
+                    <label>Açıklama</label>
+                    <input type="text" asp-for="Description" class="form-control form-control-sm" placeholder="Açıklama" aria-label="Username">
+                </div>
+
+
+                <button type="submit" class="btn btn-primary me-2">Düzenlemeyi Kaydet</button>
+            </form>
+
+        </div>
+    </div>
+</div>

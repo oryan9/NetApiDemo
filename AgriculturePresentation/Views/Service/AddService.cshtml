@@ -1,0 +1,51 @@
+﻿@model AgriculturePresentation.Models.ServiceAddViewModel
+
+@{
+    ViewData["Title"] = "AddService";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Hizmet Ekle</h4>
+            <p class="card-description">
+                Hizmet Ekle
+            </p>
+
+
+
+            <form class="forms-sample" method="post">
+                <div class="form-group row">
+                    <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Başlık Ekle</label>
+                    <span asp-validation-for="Title" class="text-danger"> </span>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" asp-for="Title" placeholder="Başlık Ekle">
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Görsel Ekle</label>
+                    <span asp-validation-for="Description" class="text-danger"> </span>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" asp-for="Image" placeholder="Görsel Ekle">
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label for="exampleInputMobile" class="col-sm-3 col-form-label">Açıklama Ekle</label>
+                    <span asp-validation-for="Description " class="text-danger"> </span>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" asp-for="Description" placeholder="Açıklama Ekle">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary me-2">Kaydet</button>
+
+            </form>
+        </div>
+    </div>
+</div>

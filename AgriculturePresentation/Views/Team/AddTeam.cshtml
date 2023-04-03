@@ -1,0 +1,62 @@
+﻿@model EntityLayer.Concrete.Team
+@{
+    ViewData["Title"] = "AddTeam";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="col-md-6 grid-margin stretch-card ">
+    <div class="card">
+        <div class="card-body ">
+            <h4 class="card-title"> Personel Kayıt</h4>
+            <p class="card-description">
+                Personel Kayıt
+            </p>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label>Ad-Soyad</label>
+                    <span asp-validation-for="PersonName" class="text-danger"></span>
+                    <input type="text" class="form-control" asp-for="PersonName" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <label>Görev</label>
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                    <input type="text" class="form-control" asp-for="Title" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <label>Görsel</label>
+                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                    <input type="text" asp-for="ImageUrl" class="form-control" placeholder="ImageUrl">
+                </div>
+
+                <div class="form-group">
+                    <label> Facebook </label>
+                    <span asp-validation-for="FacebookUrl" class="text-danger"></span>
+                    <input type="text" asp-for="FacebookUrl" class="form-control">
+                </div>
+
+
+                <div class="form-group">
+                    <label> Instragram </label>
+                    <span asp-validation-for="InstragramUrl" class="text-danger"></span>
+                    <input type="text" asp-for="InstragramUrl" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label> Web Site </label>
+                    <span asp-validation-for="WebSiteUrl" class="text-danger"></span>
+                    <input type="text" asp-for="WebSiteUrl" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label> Twitter </label>
+                    <span asp-validation-for="TwitterUrl" class="text-danger"></span>
+                    <input type="text" asp-for="TwitterUrl" class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-primary me-2">Kaydet</button>
+                <a href="/Team/Index" class="btn btn-light btn-rounded btn-fw">Geri Dön</a>
+
+            </form>
+        </div>
+    </div>
+</div>
