@@ -4,7 +4,6 @@ Crud
 
 
 ![Model](/img1.png)
-
 ![Model](/img2.png)
 ![Model](/img3.png)
 ![Model](/img4.png)
